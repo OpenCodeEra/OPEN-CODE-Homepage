@@ -1,3 +1,15 @@
+:root{
+  --blue: #108ae4;
+  --light-blue: aliceblue;
+  --voilet-blue: #334bff;
+  --cadet-blue: rgb(12, 134, 153);
+  --dark-blue-transparent: rgba(0, 136, 255, 0.25);
+  --scrollbar-color-1: #18191a;
+  --scrollbar-color-2: #329cee17;
+  
+  --main-font : 'Poppins', sans-serif;
+  --secondary-font: 'Roboto', sans-serif;
+}
 * {
   margin: 0;
   padding: 0;
@@ -24,18 +36,18 @@ html {
 
 body {
   background-color: rgb(24, 25, 26);
-  color: rgb(16, 138, 228);
-  font-family: "Poppins", sans-serif;
+  color: var(--blue);
+  font-family: var(--main-font);
 }
 
 h2::selection {
-  color: rgb(255, 255, 255);
-  background: rgba(0, 136, 255, 0.25);
+  color: white;
+  background: var(--dark-blue-transparent);
 }
 
 p::selection {
-  color: rgb(255, 255, 255);
-  background: rgba(0, 136, 255, 0.2);
+  color: white;
+  background: var(--dark-blue-transparent);
 }
 
 p {
@@ -44,7 +56,7 @@ p {
 
 h2 {
   font-size: 2rem;
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 body::-webkit-scrollbar {
@@ -52,11 +64,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #18191a;
+  background: var(--scrollbar-color-1)
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #329cee17;
+  background: var(--scrollbar-color-2);
 }
 
 .header-push-down {
@@ -72,7 +84,7 @@ header {
 
 main hr {
   border: 0;
-  background-color: aliceblue;
+  background-color: var(--light-blue);
   height: 0.8px;
   margin: 28px 80px;
 }
@@ -112,12 +124,12 @@ nav ul li[href="services.html"] {
 
 nav ul li a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.829);
+  color: white;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
-  color: rgb(16, 138, 228);
+  color: var(--blue);
   transition: 0.4s;
 }
 
@@ -133,21 +145,21 @@ nav ul li a:hover {
 }
 
 .left img {
-  height: 80px;
+  height: 70px;
 }
 
 .left .blue {
   font-size: 2rem;
-  font-weight: 100;
-  margin: 0 5px;
-  color: rgb(17, 135, 223);
+  font-weight: 600;
+  /* margin: 0 5px; */
+  color: var(--blue);
 }
 
 .left .white {
   font-size: 2rem;
-  font-weight: 100;
-  margin: 0 5px;
-  color: aliceblue;
+  font-weight: 600;
+  /* margin: 0 5px; */
+  color: var(--light-blue);
 }
 
 .left a {
@@ -168,7 +180,7 @@ nav ul li a:hover {
   align-items: center;
   width: 57%;
   margin: 0 50px;
-  color: floralwhite;
+  color: var(--light-blue);
   font-size: 2.5rem;
   pointer-events: none;
 }
@@ -176,13 +188,13 @@ nav ul li a:hover {
 .leftSection .blue {
   font-size: 3rem;
   font-weight: 100;
-  color: rgb(101 171 224);
+  color: var(--light-blue);
 }
 
 .leftSection .focus-gradient {
-  color: rgb(131 191 236);
+  color: var(--light-blue);
   font-weight: bold;
-  background: linear-gradient(to left, rgb(17, 135, 223), floralwhite);
+  background: linear-gradient(to left, var(--blue), var(--light-blue));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -190,7 +202,7 @@ nav ul li a:hover {
 
 #element {
   font-weight: bold;
-  background: linear-gradient(to left, rgb(17, 135, 223), floralwhite);
+  background: linear-gradient(to left, var(--blue), var(--light-blue));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -248,11 +260,11 @@ nav ul li a:hover {
 .second-section-container h1 {
   font-size: 3rem;
   font-weight: bold;
-  color: aliceblue;
+  color: var(--light-blue);
 }
 
 .text-gradient-blue-white {
-  background: linear-gradient(to left, rgb(96 186 253), floralwhite);
+  background: linear-gradient(to left, var(--blue), var(--light-blue));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -290,7 +302,7 @@ nav ul li a:hover {
   border: 2px solid white;
   border-radius: 8px;
   padding: 8px;
-  box-shadow: 5px 5px 5px rgb(17, 135, 223);
+  box-shadow: 5px 5px 5px var(--blue);
   color: white;
 }
 
@@ -330,7 +342,7 @@ nav ul li a:hover {
 }
 
 .contactSection div p {
-  color: rgb(144, 198, 239);
+  color: var(--light-blue);
   margin: 15px 0 25px;
 }
 
@@ -351,7 +363,7 @@ nav ul li a:hover {
 .rightContact {
   width: 400px;
   background: linear-gradient(#212121, #212121) padding-box,
-    linear-gradient(145deg, transparent 35%, #334bff, #40c9ff) border-box;
+    linear-gradient(145deg, transparent 35%, var(--voilet-blue), var(--light-blue)) border-box;
   border: 3px solid transparent;
   padding: 12px 24px;
   font-size: 14px;
@@ -382,13 +394,13 @@ form textarea {
 input:focus,
 form textarea:focus {
   outline: none;
-  border-color: #1c99ff;
+  border-color: var(--blue);
 }
 
 input::selection,
 form textarea::selection {
   color: rgb(255, 255, 255);
-  background: rgb(12, 134, 153);
+  background: var(--cadet-blue)
 }
 
 form textarea {
@@ -399,7 +411,7 @@ form textarea {
 form button,
 #close {
 
-  background-color: #007bff;
+  background-color: var(--blue);
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -413,7 +425,7 @@ form button,
 
 form button[type="submit"]:hover,
 #close:hover {
-  background-color: #0056b3;
+  background-color: var(--voilet-blue);
 }
 
 
@@ -424,7 +436,7 @@ form button[type="submit"]:hover,
   transform: translate(-50%, -50%);
   background-color: #242526;
   padding: 40px;
-  box-shadow: 2px 2px 15px 0px #243f59;
+  box-shadow: 2px 2px 15px 0px var(--dark-blue-transparent);
   color: white;
   visibility: hidden;
   opacity: 0;
@@ -623,7 +635,7 @@ footer {
 #nav-footer a:hover,
 #contribute-link:hover,
 #socials a:hover {
-  color: #007bff;
+  color: var(--blue);
 }
 
 @media only screen and (max-width: 750px) {
@@ -638,7 +650,7 @@ article {
   --link-icon-opacity: 0;
   position: relative;
   border-radius: 16px;
-  box-shadow: 5px 5px 5px rgb(17, 135, 223);
+  box-shadow: 5px 5px 5px var(--cadet-blue);
   background: rgb(24, 25, 26);
   transform-origin: center;
   transition: all 0.4s ease-in-out;
@@ -687,13 +699,13 @@ article a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #1187df;
+  color: var(--blue);
   position: absolute;
   bottom: 20px;
 }
 
 article a:focus {
-  outline: 1px dotted #1187df;
+  outline: 1px dotted var(--blue);
 }
 
 article a .icon,
@@ -710,7 +722,7 @@ article a .icon,
 /* using the has() relational pseudo selector to update our custom properties */
 article:has(:hover, :focus) {
   --img-scale: 1.1;
-  --title-color: rgb(17, 135, 223);
+  --title-color: var(--blue);
   --link-icon-translate: 0;
   --link-icon-opacity: 1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -858,19 +870,19 @@ article:has(:hover, :focus) {
       font-size: 1.5rem;
       font-weight: 100;
       margin: 0 5px;
-      color: rgb(17, 135, 223);
+      color: var(--blue);
   }
   .left .white {
       font-size: 1.5rem;
       font-weight: 100;
       margin: 0 5px;
-      color: aliceblue;
+      color: var(--light-blue);
   }
   .left .blue {
       font-size: 1.5rem;
       font-weight: 100;
       margin: 0 5px;
-      color: rgb(17, 135, 223);
+      color: var(--blue);
   }
 
 
@@ -887,7 +899,7 @@ article:has(:hover, :focus) {
       align-items: center;
       width: 57%;
       margin: 0 50px;
-      color: floralwhite;
+      color: var(--light-blue);
       font-size: 2.5rem;
       pointer-events: none;
   }
@@ -898,7 +910,7 @@ article:has(:hover, :focus) {
   .leftSection .blue {
       font-size: 2.4rem;
       font-weight: 100;
-      color: rgb(101 171 224);
+      color: var(--cadet-blue);
   }
 
   .rightSection{
@@ -927,7 +939,7 @@ article:has(:hover, :focus) {
       margin-top: 15px;
       margin-left: 22px;
       width: 345px;
-      background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%, #334bff, #40c9ff) border-box;
+      background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%, var(--voilet-blue), var(--dark-blue-transparent)) border-box;
       border: 3px solid transparent;
       padding: 12px 24px;
       font-size: 14px;
@@ -950,9 +962,4 @@ article:has(:hover, :focus) {
     margin-bottom: 8px;
     margin-left: 54px;
   }
-
-
-
-
-
 }
